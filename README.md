@@ -1,25 +1,57 @@
 # Sri Lanka Road Accident Data Analysis
 
-Analyze road accident patterns in Sri Lanka to understand factors like time, location, weather, and vehicle types affecting accident severity.
+This project analyzes road accident data in Sri Lanka to uncover key insights into when, where, and how accidents happen. The goal is to better understand the impact of time, weather, location, and vehicle types on accident patterns and severity.
 
-## Overview
+## 📊 Project Overview
 
-- Data cleaning & feature extraction  
-- Visualizations: district-wise, time-wise, weather impact, severity, vehicle types  
-- Insights into fatalities, injuries, and accident hotspots  
+Using a dataset of road accidents across Sri Lanka, this Python project performs:
 
-## Technologies
+- Data cleaning and feature extraction
+- Visual exploration using bar charts, pie charts, histograms, and heatmaps
+- District-wise, time-wise, and weather-based accident insights
+- Severity and fatality trend analysis
+- Optional insights based on available columns like `location`, `vehicle_type`, and `date`
 
-- Python (Pandas, Matplotlib, Seaborn)  
-- Optional: SQL (SQLite/MySQL/PostgreSQL)
+## 🛠️ Technologies Used
 
-## Dataset
+- **Python**
+- **Pandas** for data manipulation
+- **Matplotlib** & **Seaborn** for data visualization
+- **MySQL
 
-`road_accidents_srilanka.csv` with columns:
+## 📁 Dataset
 
-| district | date (YYYY-MM-DD) | time (HH:MM) | fatalities | injuries | severity | weather | location | vehicle_type |
+- Assumed dataset: `road_accidents_srilanka.csv`
+- Columns used: `district`, `time`, `date`, `fatalities`, `injuries`, `severity`, `weather`, `location`, `vehicle_type`
 
-Sample row:
+> Note: Code dynamically adjusts based on available columns.
 
-```csv
-Colombo,2023-01-15,18:30,2,5,Fatal,Rainy,Borella,Car
+## 📈 Key Analysis & Visualizations
+
+1. **District-wise Accident Count**
+2. **Hourly Distribution of Accidents**
+3. **Weather Condition vs Accidents**
+4. **Severity-wise Fatalities and Injuries**
+5. **Top 10 Accident-Prone Locations** *(if available)*
+6. **Accidents by Day of the Week**
+7. **Vehicle Type Involvement**
+8. **Correlation Heatmap of Numerical Features**
+9. **Pie Chart of Accident Severity**
+10. **Fatal vs Non-Fatal by District**
+
+All graphs are automatically saved as `.png` files in the project directory.
+
+## 📷 Sample Outputs
+
+| Graph                          | Description                            |
+|-------------------------------|----------------------------------------|
+| `District_Accidents.png`       | Number of accidents per district       |
+| `Hourly_Accidents.png`         | Accidents across hours of the day      |
+| `Weather_Accidents.png`        | Weather conditions and accident frequency |
+| `Fatal_vs_Nonfatal_District.png` | Comparison of fatal vs non-fatal incidents |
+
+## 🚀 How to Run
+
+```bash
+pip install pandas matplotlib seaborn
+python analysis_script.py
